@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
 
 const mount = (el) => {
-  ReactDOM.render(<h1>Marketing Page</h1>, el);
+  ReactDOM.render(<App />, el);
 };
 
 //If we're in development and in isolation
 if (process.env.NODE_ENV === "development") {
   const devRoot = document.querySelector("#_marketing-dev-root");
-  console.log("devRoot: ", devRoot);
 
   if (devRoot) {
     mount(devRoot);
